@@ -1,5 +1,7 @@
 # Are you bored ?
 
+[![Are you bored](public/img/screenshot-git.PNG)]()
+
 **ENGLISH VERSION** – Are you bored ? Is a simple and fun web application that gives you random activity ideas when you're feeling bored. Whether you're alone, with friends, indoors or out, just click a button and discover something new to do!
 
 ## ✨ Features
