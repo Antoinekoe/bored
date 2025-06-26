@@ -54,8 +54,10 @@
 ```
 boredom-buster/
 ├── public/
-│   └── styles/
-│       └── main.css          # Main CSS file for styling
+│   ├── styles/
+│   │    └── main.css          # Main CSS file for styling
+│   └── img
+|        └── screenshot-git.PNG   # (Optional) Screenshot for Git
 ├── views/
 │   └── index.ejs             # Main EJS view rendered by Express
 ├── index.js                  # Application entry point (Express server)
