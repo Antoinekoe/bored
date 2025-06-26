@@ -33,23 +33,43 @@
       </select>
       <button type="submit" class="form-submit">Go</button>
     </form>
+
     <section id="cards" class="cards">
+      <% if (errorStatus === false) { %>
+      <% if (locals.dataPost && dataPost.length > 1 ) { %>
+      <% let nombreAleatoirePost = Math.floor(Math.random() * dataPost.length); %>
       <article class="card-item">
         <h2 class="card-activity">
+          <%= dataPost[nombreAleatoirePost].activity %>
         </h2>
         <div class="card-info">
           <span class="card-type">
+            <%= dataPost[nombreAleatoirePost].type %>
           </span>
           <span class="card-participants">
-            <span class="card-number"></span>
+            <span class="card-number"><%= dataPost[nombreAleatoirePost].participants %> participants</span>
           </span>
         </div>
       </article>
-
-
+      <%  } else { %>
+      <article class="card-item">
+        <h2 class="card-activity">
+          <%= dataGet.activity %>
+        </h2>
+        <div class="card-info">
+          <span class="card-type">
+            <%= dataGet.type %>
+          </span>
+          <span class="card-participants">
+            <span class="card-number"><%= dataGet.participants %> participants</span>
+          </span>
+        </div>
+      </article>
+      <% } } else { %>
       <div id="tag-error" class="tag-error">
+        <%= "No activities that match your criteria." %>
       </div>
-
+      <% }; %>
     </section>
   </div>
 
